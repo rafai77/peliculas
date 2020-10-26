@@ -15,7 +15,7 @@ class MovieTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        //self.movieMV = MovieViewModel(request: EndPoint.Top)
+        self.movieMV = MovieViewModel(request: EndPoint.Top )
     }
     
     override func tearDown() {
@@ -27,12 +27,13 @@ class MovieTests: XCTestCase {
     {
         let expectation = self.expectation(description: " Al servidor")
         var results: Int?
-        MovieViewModel(request: EndPoint.Top).data { (res) in
-            results=res
+        
+        self.movieMV.data(pages: 1) { (det, aux) in
+            results = det
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 5)
-        print("sdf",results!)
+        XCTAssert(results! >= 20, "No se cargaron los primeros 20 datos")
        
 
     }

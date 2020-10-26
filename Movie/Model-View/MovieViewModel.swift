@@ -22,29 +22,34 @@ class MovieViewModel: ObservableObject {
     @Published var movieList = [Peliculas]()
     @Published var movieList2 = [DestailsMovie]()
     static var page = 1
-    var req: String
+    var req: String = " "
     
     init(request :String)
     {
         self.req = request
-        self.data { (dat) in
-            print(dat)
+        self.data { (dat,details) in
+            print("swui" , dat)
+            self.movieList2 = details
         }
 
         
     }
+   
     
     
-    public func data (completion:@escaping (_ rest:Int)->Void)
+    public func data (pages: Int = 1,completion:@escaping (_ rest:Int ,_ details :[DestailsMovie]   )->Void)
     {
         var auxdatadetails = [DestailsMovie]()
+        print(self.req+"\(pages)")
         DispatchQueue.main.async {
-            AF.request(self.req+"1").responseJSON   { (response) in
+            AF.request(self.req+"\(pages)").responseJSON   { (response) in
                 var result = -1
                 switch response.result
                 {
                 case .success(let data):
+                    
                     let json = JSON(data)
+                    //print(json)
                     for i in json["results"]
                     {
                         let movie = DestailsMovie(id: i.1["id"].int ?? 0, poster: i.1["poster_path"].string ?? "0", adult: i.1["adult"].string ?? "0", overview: i.1["overview"].string ?? "0", date: i.1["release_date"].string ?? "0", genre_ids: [0,0,0], title: i.1["title"].string ?? "0", original_title: i.1["original_title"].string ?? "0", backdrop_path: i.1["backdrop_path"].string ?? "0", popularity: i.1["popularity"].double ?? 0.0, video: i.1["video"].bool ?? false, vote_average: i.1["vote_average"].double ?? 0.0, name: i.1["name"].string ?? "0", original_name: i.1["original_name"].string ?? "0")
@@ -52,15 +57,15 @@ class MovieViewModel: ObservableObject {
                     }
                     var aux = Peliculas(id: 1 , total_results: json["total_results"].int ?? 0 , total_page: json["total_results"].int ?? 0 , dataMovies: auxdatadetails)
                     self.movieList = [aux]
-                    self.movieList2 = auxdatadetails
-                    result = self.movieList2.count
+                    result = auxdatadetails.count
             
                     
                 case .failure(let error):
+                    result = -1
                     print(error)
                     
                 }
-                completion(result)
+                completion(result,auxdatadetails)
             }
             
         }
