@@ -8,6 +8,7 @@
 import SwiftUI
 //import QGrid
 
+@available(iOS 14.0, *)
 struct ContentView: View {
     var body: some View {
         NavigationView
@@ -41,6 +42,7 @@ struct NavigationConfigurator: UIViewControllerRepresentable {
 
 }
 
+@available(iOS 14.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

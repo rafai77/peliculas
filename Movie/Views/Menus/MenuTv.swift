@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct MenuTv: View {
     @State private var pos = 0// poscion del menu 0 para toprate 1 par populares
     var body: some View {
@@ -32,6 +33,7 @@ struct MenuTv: View {
     }
 }
 
+@available(iOS 14.0, *)
 struct MenuTv_Previews: PreviewProvider {
     static var previews: some View {
         MenuTv()

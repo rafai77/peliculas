@@ -31,6 +31,8 @@ struct EndPoint {
         Constants.KEY +
         Constants.Language +
         Constants.Page;
+    static var Search = Constants.URLSearch + Constants.KEY + Constants.Language + Constants.query; // se inserta la query y luego se pone la pagina puden ser varias paginas 
+        
     
     
 }
