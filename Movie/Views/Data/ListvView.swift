@@ -9,6 +9,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct ListvView: View {
+    @State var firstAppear: Bool = true
     var req : String
     @ObservedObject var manager :MovieViewModel
     @State var page : Int = 1
@@ -19,12 +20,11 @@ struct ListvView: View {
     }
     
     public var body: some View {
-        Text("\(self.manager.movieList2.count)").background(Color.blue)
+        //Text("\(self.manager.movieList2.count)").background(Color.blue)
         if (self.manager.movieList2.isEmpty)
         {
             ProgressView()
-            
-            
+
         }
         else
         {
@@ -39,11 +39,15 @@ struct ListvView: View {
                         
                         CellMovies(urlimagen: self.manager.movieList2[j+(i*4)].poster, titulo: title , tituloO: titleO, vote: self.manager.movieList2[j+(i*4)].vote_average, popularity: self.manager.movieList2[j+(i*4)].vote_average)
                     }
-                }.onAppear( perform: {
                     
-                    //self.getNextPageIfNecessary(encounteredIndex: i)
-                    
-                })
+                }.onAppear(perform:
+                            {
+                                if !self.firstAppear { return }
+                                self.getNextPageIfNecessary(encounteredIndex: i)
+                              
+                            })
+                
+                
             }
         }
         
@@ -51,7 +55,7 @@ struct ListvView: View {
     private func getNextPageIfNecessary(encounteredIndex: Int) {
         guard encounteredIndex == manager.movieList2.count/4-1  else { return }
         self.page += 1
-        print(self.page)
+        
         self.manager.nextpage(page: self.page)
     }
 }
