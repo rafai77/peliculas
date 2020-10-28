@@ -16,8 +16,7 @@ struct BottomBar: View {
             if self.pos == 1
             {
                 
-                MenuMovie()
-            } // aqi va el mnu para series de tv }
+                MenuMovie()            } // aqi va el mnu para series de tv }
             
             if self.pos == 0
             {
@@ -25,11 +24,9 @@ struct BottomBar: View {
             } // aqi va el mnu para peliculaas de tv }
             if self.pos == 2
             {
-                if #available(iOS 14.0, *) {
+                
                     Search()
-                } else {
-                    // Fallback on earlier versions
-                }
+                
             } // aqi va el mnu para peliculaas de tv }
             Spacer()
             Picker(selection: self.$pos , label:Text("hola" ) ) {
@@ -43,7 +40,7 @@ struct BottomBar: View {
             }.pickerStyle(SegmentedPickerStyle())
             
            
-        }
+        }.background(Color.gray.edgesIgnoringSafeArea(.all))
         
     }
     

@@ -55,7 +55,7 @@ class MovieTests: XCTestCase {
     func testSearchall()// varifica si se puede dar otra pagina
     {
        // let expectation = self.expectation(description: " Al servidor")
-        var results: Int?
+        //var results: Int?
         
         self.movieMV.Search(search: EndPoint.Search + "Batman", page: 1)
         print(self.movieMV.movieList2.count)

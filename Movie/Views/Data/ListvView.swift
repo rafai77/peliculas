@@ -16,42 +16,50 @@ struct ListvView: View {
     init(req :String) {
         self.manager =  MovieViewModel(request: req)
         self.req = req
+        UIScrollView.appearance().backgroundColor = .black
+        UITableView.appearance().backgroundColor = .black
+            UITableViewCell.appearance().backgroundColor = .black
+            UITableView.appearance().tableFooterView = UIView()
+        
+        
         
     }
     
     public var body: some View {
         //Text("\(self.manager.movieList2.count)").background(Color.blue)
+       
         if (self.manager.movieList2.isEmpty)
         {
-            ProgressView()
-
+            ProgressView().background(Color.white)
+            
         }
         else
         {
+          
             List((0..<(self.manager.movieList2.count/4) ) , id : \.self )
             { i in
-                HStack
-                {
-                    ForEach (0..<4)
-                    { j in
-                        let title: String = self.manager.movieList2[j+(i*4)].title == "0" ? self.manager.movieList2[j+(i*4)].name : self.manager.movieList2[j+(i*4)].title
-                        let titleO: String = self.manager.movieList2[j+(i*4)].original_title == "0" ? self.manager.movieList2[j+(i*4)].original_name : self.manager.movieList2[j+(i*4)].original_title
-                        
-                        CellMovies(urlimagen: self.manager.movieList2[j+(i*4)].poster, titulo: title , tituloO: titleO, vote: self.manager.movieList2[j+(i*4)].vote_average, popularity: self.manager.movieList2[j+(i*4)].vote_average)
-                    }
+                ForEach (0..<4)
+                { j in
+                    let title: String = self.manager.movieList2[j+(i*4)].title == "0" ? self.manager.movieList2[j+(i*4)].name : self.manager.movieList2[j+(i*4)].title
+                    let titleO: String = self.manager.movieList2[j+(i*4)].original_title == "0" ? self.manager.movieList2[j+(i*4)].original_name : self.manager.movieList2[j+(i*4)].original_title
+                    //NavigationLink()
+                    ScrollView(.horizontal, showsIndicators: true)
+                    {
+                                NavigationLink(destination: Details( details: self.manager.movieList2[j+(i*4)] )) {
+                                    CellMovies(urlimagen: self.manager.movieList2[j+(i*4)].poster, titulo: title , tituloO: titleO, vote: self.manager.movieList2[j+(i*4)].vote_average, popularity: self.manager.movieList2[j+(i*4)].vote_average)
+                                }
+                    }.padding(.all, -15)
                     
-                }.onAppear(perform:
-                            {
-                                if !self.firstAppear { return }
-                                self.getNextPageIfNecessary(encounteredIndex: i)
-                              
-                            })
+                }
+
                 
                 
             }
-        }
+          
         
     }
+    }
+    
     private func getNextPageIfNecessary(encounteredIndex: Int) {
         guard encounteredIndex == manager.movieList2.count/4-1  else { return }
         self.page += 1

@@ -13,8 +13,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView
         {
-            VStack
+           
+            ZStack
             {
+                Color.black.ignoresSafeArea()
                 Text("").navigationBarTitle("TMDB Cartelera", displayMode: .inline).background(Color.blue).background(NavigationConfigurator { nc in
                 nc.navigationBar.barTintColor = .blue
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
