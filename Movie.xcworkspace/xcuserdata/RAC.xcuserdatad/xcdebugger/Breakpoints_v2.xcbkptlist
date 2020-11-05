@@ -52,5 +52,68 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "314BDE6B-A9B5-419E-894B-A956949D3431"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movie/Views/Data/ListvView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "314BDE6B-A9B5-419E-894B-A956949D3431 - 3ae7defe1f686b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Movie.ListvView.body.getter : some"
+                  moduleName = "Movie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/RAC/Documents/Movie/Movie/Views/Data/ListvView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "840">
+               </Location>
+               <Location
+                  uuid = "314BDE6B-A9B5-419E-894B-A956949D3431 - 7b3e283414aac91f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.ScrollView&lt;SwiftUI.NavigationLink&lt;Movie.CellMovies, Movie.Details&gt;&gt;&gt; in closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Movie.ListvView.body.getter : some"
+                  moduleName = "Movie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/RAC/Documents/Movie/Movie/Views/Data/ListvView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "583">
+               </Location>
+               <Location
+                  uuid = "314BDE6B-A9B5-419E-894B-A956949D3431 - 92e7bbb12ed33c9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in Movie.ListvView.body.getter : some"
+                  moduleName = "Movie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/RAC/Documents/Movie/Movie/Views/Data/ListvView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

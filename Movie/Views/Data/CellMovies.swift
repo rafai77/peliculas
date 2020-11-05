@@ -39,11 +39,7 @@ struct CellMovies: View {
                     
                 }.frame(width: 85, height: 85).padding(0).listRowBackground(Color.red)
                 
-                
-                
-                
-                
-                
+
                 
             }
         }

@@ -12,6 +12,7 @@
 		1939C4AE2540BCF10053E81F /* CellMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939C4AD2540BCF10053E81F /* CellMovies.swift */; };
 		1939C4B6254221C40053E81F /* ListvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939C4B5254221C40053E81F /* ListvView.swift */; };
 		1939C4B9254227EC0053E81F /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1939C4B8254227EC0053E81F /* MovieViewModel.swift */; };
+		194609FA254C8EC80033529C /* ManegerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194609F9254C8EC80033529C /* ManegerRepository.swift */; };
 		194694A7253F7EE000AC534A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194694A6253F7EE000AC534A /* AppDelegate.swift */; };
 		194694A9253F7EE000AC534A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194694A8253F7EE000AC534A /* SceneDelegate.swift */; };
 		194694AB253F7EE000AC534A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194694AA253F7EE000AC534A /* ContentView.swift */; };
@@ -27,6 +28,10 @@
 		194694E02540B11000AC534A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194694DF2540B11000AC534A /* Constants.swift */; };
 		194694E42540B20E00AC534A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194694E32540B20E00AC534A /* EndPoint.swift */; };
 		19639E382548B08200ACD1CF /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19639E372548B08100ACD1CF /* Details.swift */; };
+		19639E3E2549FE7C00ACD1CF /* CastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19639E3D2549FE7C00ACD1CF /* CastViewModel.swift */; };
+		19639E42254A055800ACD1CF /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19639E41254A055800ACD1CF /* Cast.swift */; };
+		19639E46254A13B300ACD1CF /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19639E45254A13B300ACD1CF /* ActorCell.swift */; };
+		19639E4B254A26FF00ACD1CF /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 19639E4A254A26FF00ACD1CF /* SwiftUIRefresh */; };
 		19CC892125472388004FA1D8 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CC892025472388004FA1D8 /* MovieTests.swift */; };
 		7237F4AB863FB991E71CB0DB /* Pods_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F205591AD346B6EEC37B5A /* Pods_Movie.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +52,7 @@
 		1939C4AD2540BCF10053E81F /* CellMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMovies.swift; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		1939C4B5254221C40053E81F /* ListvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListvView.swift; sourceTree = "<group>"; };
 		1939C4B8254227EC0053E81F /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		194609F9254C8EC80033529C /* ManegerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManegerRepository.swift; sourceTree = "<group>"; };
 		194694A3253F7EE000AC534A /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		194694A6253F7EE000AC534A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		194694A8253F7EE000AC534A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 		194694DF2540B11000AC534A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		194694E32540B20E00AC534A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		19639E372548B08100ACD1CF /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		19639E3D2549FE7C00ACD1CF /* CastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewModel.swift; sourceTree = "<group>"; };
+		19639E41254A055800ACD1CF /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		19639E45254A13B300ACD1CF /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
 		19CC891E25472388004FA1D8 /* MovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CC892025472388004FA1D8 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		19CC892225472388004FA1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19639E4B254A26FF00ACD1CF /* SwiftUIRefresh in Frameworks */,
 				194694C2253F845F00AC534A /* QGrid in Frameworks */,
 				7237F4AB863FB991E71CB0DB /* Pods_Movie.framework in Frameworks */,
 			);
@@ -124,6 +134,14 @@
 			children = (
 			);
 			path = ViewDetails;
+			sourceTree = "<group>";
+		};
+		194609F7254C8EA40033529C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				194609F9254C8EC80033529C /* ManegerRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		1946949A253F7EE000AC534A = {
@@ -187,7 +205,9 @@
 		194694BE253F7F5200AC534A /* Model-View */ = {
 			isa = PBXGroup;
 			children = (
+				194609F7254C8EA40033529C /* Repository */,
 				1939C4B8254227EC0053E81F /* MovieViewModel.swift */,
+				19639E3D2549FE7C00ACD1CF /* CastViewModel.swift */,
 			);
 			path = "Model-View";
 			sourceTree = "<group>";
@@ -197,6 +217,7 @@
 			children = (
 				194694CE2540A5E300AC534A /* Peliculas.swift */,
 				194694D12540A67300AC534A /* DetailsMovie.swift */,
+				19639E41254A055800ACD1CF /* Cast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				19639E372548B08100ACD1CF /* Details.swift */,
+				19639E45254A13B300ACD1CF /* ActorCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -264,6 +286,7 @@
 			name = Movie;
 			packageProductDependencies = (
 				194694C1253F845F00AC534A /* QGrid */,
+				19639E4A254A26FF00ACD1CF /* SwiftUIRefresh */,
 			);
 			productName = Movie;
 			productReference = 194694A3253F7EE000AC534A /* Movie.app */;
@@ -319,6 +342,7 @@
 			mainGroup = 1946949A253F7EE000AC534A;
 			packageReferences = (
 				194694C0253F845F00AC534A /* XCRemoteSwiftPackageReference "QGrid" */,
+				19639E49254A26FF00ACD1CF /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = 194694A4253F7EE000AC534A /* Products */;
 			projectDirPath = "";
@@ -397,6 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19639E46254A13B300ACD1CF /* ActorCell.swift in Sources */,
+				194609FA254C8EC80033529C /* ManegerRepository.swift in Sources */,
 				194694C5253F91AD00AC534A /* BottomBar.swift in Sources */,
 				194694CB253F95DF00AC534A /* MenuMovie.swift in Sources */,
 				194694A7253F7EE000AC534A /* AppDelegate.swift in Sources */,
@@ -407,9 +433,11 @@
 				1939C4B6254221C40053E81F /* ListvView.swift in Sources */,
 				194694E02540B11000AC534A /* Constants.swift in Sources */,
 				194694AB253F7EE000AC534A /* ContentView.swift in Sources */,
+				19639E42254A055800ACD1CF /* Cast.swift in Sources */,
 				194694C8253F95BC00AC534A /* MenuTv.swift in Sources */,
 				1939C4B9254227EC0053E81F /* MovieViewModel.swift in Sources */,
 				194694CF2540A5E300AC534A /* Peliculas.swift in Sources */,
+				19639E3E2549FE7C00ACD1CF /* CastViewModel.swift in Sources */,
 				191012FF25434A790063B097 /* Search.swift in Sources */,
 				19639E382548B08200ACD1CF /* Details.swift in Sources */,
 				191013032543506A0063B097 /* BarSearch.swift in Sources */,
@@ -691,6 +719,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		19639E49254A26FF00ACD1CF /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -698,6 +734,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 194694C0253F845F00AC534A /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
+		};
+		19639E4A254A26FF00ACD1CF /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19639E49254A26FF00ACD1CF /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

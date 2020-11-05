@@ -22,4 +22,5 @@ struct DestailsMovie: Identifiable {
     var vote_average : Double
     var name : String
     var original_name: String
+    var lenguaje:String
 }

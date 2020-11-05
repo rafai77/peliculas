@@ -9,37 +9,41 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct BottomBar: View {
+    @EnvironmentObject var manager2 : ManegerRepository 
     @State private var pos = 0// poscion del menu 0 para peliculas 1 para tv series
+    
     var body: some View {
         VStack
         {
             if self.pos == 1
             {
                 
-                MenuMovie()            } // aqi va el mnu para series de tv }
+                MenuMovie().environmentObject(ManegerRepository())
+                
+            } // aqi va el mnu para series de tv }
             
             if self.pos == 0
             {
-                MenuTv()
+                MenuTv().environmentObject(ManegerRepository())
             } // aqi va el mnu para peliculaas de tv }
             if self.pos == 2
             {
                 
-                    Search()
+               // Search()
                 
             } // aqi va el mnu para peliculaas de tv }
             Spacer()
             Picker(selection: self.$pos , label:Text("hola" ) ) {
                 
                 
-               
+                
                 Image(systemName: "tv.fill").tag(0)
                 Image(systemName: "film.fill").tag(1)
                 Image(systemName: "magnifyingglass.circle.fill").tag(2)
                 
             }.pickerStyle(SegmentedPickerStyle())
             
-           
+            
         }.background(Color.gray.edgesIgnoringSafeArea(.all))
         
     }

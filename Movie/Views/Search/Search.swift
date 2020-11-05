@@ -25,12 +25,12 @@ struct Search: View {
                 
                 
                 //self.search(req: EndPoint.Search + "Batman" + Constants.Page, page: 1)
-                Text(texto).onChange(of: texto) { (t) in
-                    control.manager.Search(search: EndPoint.Search +  t.replacingOccurrences(of: " ", with: "%20") + Constants.Page, page: 1)
-                    
-                }
+//                Text(texto).onChange(of: texto) { (t) in
+//                    control.manager.Search(search: EndPoint.Search +  t.replacingOccurrences(of: " ", with: "%20") + Constants.Page, page: 1)
+//
+//                }
                
-                control.body
+                //control.body
                        
                  
                    
@@ -45,7 +45,7 @@ struct Search: View {
     
     func search(req : String , page: Int )
     {
-        control.manager.Search(search: req , page: page)
+       // control.manager.Search(search: req , page: page)
     }
 }
 
