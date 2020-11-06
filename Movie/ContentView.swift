@@ -10,7 +10,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct ContentView: View {
-    @ObservedObject var manager2 : ManegerRepository = ManegerRepository()
+    //@ObservedObject var manager2 : ManegerRepository = ManegerRepository()
 
     var body: some View {
         NavigationView
@@ -24,7 +24,7 @@ struct ContentView: View {
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
             })
                 
-                BottomBar().environmentObject(self.manager2)
+                BottomBar()
             }
             
         }

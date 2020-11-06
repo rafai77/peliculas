@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct BottomBar: View {
-    @EnvironmentObject var manager2 : ManegerRepository 
+    //@EnvironmentObject var manager2 : ManegerRepository 
     @State private var pos = 0// poscion del menu 0 para peliculas 1 para tv series
     
     var body: some View {
@@ -18,13 +18,13 @@ struct BottomBar: View {
             if self.pos == 1
             {
                 
-                MenuMovie().environmentObject(ManegerRepository())
+                MenuMovie()
                 
             } // aqi va el mnu para series de tv }
             
             if self.pos == 0
             {
-                MenuTv().environmentObject(ManegerRepository())
+                MenuTv()
             } // aqi va el mnu para peliculaas de tv }
             if self.pos == 2
             {

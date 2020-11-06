@@ -22,13 +22,15 @@ class ManegerRepository : ObservableObject
     @Published var listpopularTv = Peliculas()
     @Published var listTopTv = Peliculas()
     //var listpopularMovies = [DestailsMovie]()
+    static let Manager  = ManegerRepository()
     
     init() {
        
     }
+   
     //Obtener las peliculas y guradarlas en
     
-    public func routerNext(req :String, page : Int) -> Peliculas
+    public func routerNext(req :String, page : Int) 
     {
         print("\(page)")
         switch req
@@ -44,7 +46,7 @@ class ManegerRepository : ObservableObject
         default:
             print("Url mal")
         }
-        return Peliculas()
+       
     }
     
     
@@ -76,7 +78,7 @@ class ManegerRepository : ObservableObject
         if self.listTopMovies.dataMovies.isEmpty
         {
             print("sin datos")
-            MovieViewModel(request: EndPoint.Top ).data(search: EndPoint.Top, pages: Page) { (numR, movies) in
+            MovieViewModel(request: EndPoint.Top ).data(search: EndPoint.Top, pages: 1) { (numR, movies) in
                 aux = movies
                 
                 self.listTopMovies = aux
@@ -86,8 +88,16 @@ class ManegerRepository : ObservableObject
         }
         else
         {
+            if (Page == -1 )
+            {
+                self.listTopMovies = Peliculas()
+                MovieViewModel(request: EndPoint.Top ).data(search: EndPoint.Top, pages: 1) { (numR, movies) in
+                    aux = movies
+                    
+                    self.listTopMovies = aux
+                }
+            }
             return self.listTopMovies
-            
         }
     }
     
@@ -184,7 +194,7 @@ class ManegerRepository : ObservableObject
     {
         var aux = Peliculas()
        
-            print("sin datos")
+        
             
             MovieViewModel(request: EndPoint.Popular ).data(search: EndPoint.Popular, pages: Page) { (numR, movies) in
                 aux = movies
@@ -200,7 +210,7 @@ class ManegerRepository : ObservableObject
     {
         var aux = Peliculas()
       
-            print("sin datos")
+
             
             MovieViewModel(request: EndPoint.Populartv ).data(search: EndPoint.Populartv, pages: Page) { (numR, movies) in
                 aux = movies

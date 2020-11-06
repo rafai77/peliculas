@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct MenuTv: View {
-    @EnvironmentObject var manager2 : ManegerRepository
+    //@EnvironmentObject var manager2 : ManegerRepository
 
     @State private var pos = 0// poscion del menu 0 para toprate 1 par populares
     var body: some View {
@@ -24,13 +24,13 @@ struct MenuTv: View {
         if self.pos == 1
         {
             Text("Series pulares")
-            ListvView(req: EndPoint.Populartv).environmentObject(ManegerRepository())
+            ListvView(req: EndPoint.Populartv)
         } // aqi va el mnu para series de tv }
         
         if self.pos == 0
         {
             Text("Series Toprated")
-            ListvView(req: EndPoint.Toptv).environmentObject(ManegerRepository())
+            ListvView(req: EndPoint.Toptv)
         } // aqi va el mnu para peliculaas de tv }
     }
 }

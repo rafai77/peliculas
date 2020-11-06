@@ -15,7 +15,6 @@ struct Details: View {
     
     @ObservedObject var cast :CastViewModel
     var details :DestailsMovie
-    
     init(details : DestailsMovie) {
         self.details = details
         if self.details.title == "0"
@@ -73,10 +72,9 @@ struct Details: View {
                             
                         
                     }
-                    
                 }.background( Color.black.ignoresSafeArea().opacity(0.7)).modifier(BackgroundImage(path: details.backdrop_path)).padding(.top , -20)
                 }
-                
+                        
             
         }
     }
