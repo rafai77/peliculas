@@ -22,9 +22,11 @@ class ManegerRepository : ObservableObject
     @Published var listpopularTv = Peliculas()
     @Published var listTopTv = Peliculas()
     //var listpopularMovies = [DestailsMovie]()
-    static let Manager  = ManegerRepository()
+    static let Manager:ManegerRepository = ManegerRepository()
     
-    init() {
+ 
+    
+    private init() {
        
     }
    
